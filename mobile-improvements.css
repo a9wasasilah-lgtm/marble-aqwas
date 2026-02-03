@@ -1,0 +1,384 @@
+/* ==========================================================================
+   MOBILE-ONLY IMPROVEMENTS FOR PHONES - PERFECT DESIGN V2
+   These styles ONLY apply to mobile devices and don't affect desktop
+   ========================================================================== */
+
+/* ========================================
+   1. MOBILE HEADER FIXES (max-width: 1023px)
+   ======================================== */
+
+@media (max-width: 1023px) {
+
+    /* Fix Logo Position: Move to far left for both languages */
+    .main-nav {
+        /* Force logo to far left, menu toggle to far right */
+        grid-template-columns: auto 1fr auto;
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-logo {
+        justify-self: start !important;
+        left: 0 !important;
+        position: relative;
+    }
+
+    html[lang="ar"] .nav-logo {
+        justify-self: start !important;
+        right: auto !important;
+        left: 0 !important;
+    }
+
+    /* Fix: Move menu toggle to far right */
+    .nav-controls {
+        justify-self: end !important;
+        right: 0 !important;
+        position: relative;
+    }
+
+    html[dir="rtl"] .nav-controls {
+        justify-self: end !important;
+        left: auto !important;
+        right: 0 !important;
+    }
+
+    /* Smaller logo for mobile */
+    .nav-logo-img {
+        height: 50px;
+    }
+
+    /* SHOW company name text next to logo on mobile (user request) */
+    .nav-logo-text {
+        display: inline-flex !important;
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================================
+   2. WHATSAPP BUTTON SIZE FIX (Mobile Only)
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .whatsapp-btn {
+        width: 60px !important;
+        height: 60px !important;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    html[dir="rtl"] .whatsapp-btn {
+        right: auto;
+        left: 20px;
+    }
+
+    .whatsapp-icon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .whatsapp-btn:hover {
+        transform: scale(1.1) translateY(-2px);
+    }
+}
+
+/* ========================================
+   3. GALLERY CARDS FULL WIDTH - NO CONSTRAINTS
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 30px;
+        padding: 0;
+        /* Remove all padding */
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-item {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0;
+        /* Remove border radius for full width */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Perfect aspect ratio for mobile - full width cards */
+    .gallery-placeholder {
+        height: 300px !important;
+        width: 100% !important;
+        border-radius: 0;
+    }
+
+    .gallery-info {
+        padding: 1.5rem 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .gallery-caption {
+        font-size: 1.4rem !important;
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+        color: var(--color-accent);
+    }
+
+    .gallery-desc {
+        font-size: 0.95rem !important;
+        line-height: 1.65;
+        color: var(--color-text-secondary);
+        margin: 0;
+        padding: 0 0.5rem;
+    }
+}
+
+/* ========================================
+   4. TESTIMONIALS CARDS FULL WIDTH
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    .testimonial-item {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 2rem 1.5rem;
+        border-radius: 0;
+        margin: 0 !important;
+    }
+
+    .stars {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-author {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========================================
+   5. HERO SECTION MOBILE OPTIMIZATION
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .hero-section {
+        min-height: 85vh;
+        padding: 2rem 1rem;
+    }
+
+    .logo-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .brand-name {
+        font-size: 2.2rem;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* ========================================
+   6. SECTIONS SPACING & TYPOGRAPHY
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .section {
+        padding: 3rem 0;
+        /* Remove side padding */
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        padding: 0 0.5rem;
+    }
+}
+
+/* ========================================
+   7. CONTACT FORM MOBILE OPTIMIZATION
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .contact-form {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+
+    .form-input {
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .submit-btn {
+        padding: 1rem 2.5rem;
+        font-size: 0.95rem;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* ========================================
+   8. FOOTER MOBILE REDESIGN - BEAUTIFUL SINGLE COLUMN
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .footer-section {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .footer-logo-container {
+        margin-bottom: 2.5rem;
+    }
+
+    .footer-logo {
+        height: 90px;
+    }
+
+    /* Single column layout - beautiful stacking */
+    .footer-container {
+        display: flex !important;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 0;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        max-width: 100%;
+        text-align: center !important;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .footer-column:last-child {
+        border-bottom: none;
+    }
+
+    /* Hide the vertical divider lines */
+    .footer-column::after {
+        display: none !important;
+    }
+
+    html[dir="rtl"] .footer-column {
+        text-align: center !important;
+    }
+
+    .footer-title {
+        font-size: 1.2rem;
+        margin-bottom: 1.25rem;
+        font-weight: 500;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .footer-links li {
+        margin-bottom: 0;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .footer-divider {
+        margin: 2rem auto;
+        max-width: 80%;
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem;
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-legal {
+        justify-content: center;
+    }
+}
+
+/* For smaller phones - Extra refinements */
+@media (max-width: 480px) {
+    .gallery-placeholder {
+        height: 250px !important;
+    }
+
+    .gallery-caption {
+        font-size: 1.25rem !important;
+    }
+
+    .gallery-desc {
+        font-size: 0.9rem !important;
+    }
+
+    /* Make WhatsApp even smaller on very small phones */
+    .whatsapp-btn {
+        width: 55px !important;
+        height: 55px !important;
+    }
+
+    .whatsapp-icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .brand-name {
+        font-size: 1.8rem;
+    }
+
+    .logo-container {
+        width: 160px;
+        height: 160px;
+    }
+
+    .nav-logo-text {
+        font-size: 0.75rem;
+    }
+
+    .footer-logo {
+        height: 75px;
+    }
+}
